@@ -20,4 +20,14 @@ export class HeroesComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  // onChange() {
+  //   // let name = document.getElementById('name')?.nodeValue;
+  //   // console.log(name);
+  //   console.log('test');
+  // }
+
+  print() {
+    console.log(this.hero);
+  }
 }
