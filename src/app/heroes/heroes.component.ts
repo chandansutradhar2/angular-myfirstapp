@@ -6,7 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css'],
 })
 export class HeroesComponent implements OnInit {
-  constructor() {}
+  hero = 'Windstorm';
+  a: string = '';
+  isLoggedIn: boolean = false;
+  constructor() {
+    setTimeout(() => {
+      this.isLoggedIn = true;
+    }, 7000);
+  }
 
   ngOnInit(): void {}
 }
