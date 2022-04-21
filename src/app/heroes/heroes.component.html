@@ -13,7 +13,14 @@
     <li *ngFor="let item of heroes;let i=index">
         <span class="badge">{{item.id}}</span> {{item.name}}
         <button type="button" (click)="onSelect(item)"></button>
-        <input [value]="item.name" (change)="onChange($event,i)">
+        <!-- <input [value]="item.name" (change)="onChange($event,i)"> -->
     </li>
 
 </ul>
+
+<h2>{{selectedHero?.name | uppercase}} Details</h2>
+<div>id: {{selectedHero?.id}}</div>
+<div>
+    <label for="hero-name">Hero name: </label>
+    <input id="hero-name" [(ngModel)]="selectedHero?.name" placeholder="name">
+</div>
