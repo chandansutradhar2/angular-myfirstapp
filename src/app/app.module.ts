@@ -9,9 +9,12 @@ import { DemoComponent } from './demo/demo.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { TestComponent } from './test/test.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { ParentComponent } from './parent/parent.component';
+import { Child1Component } from './child1/child1.component';
+import { Child3Component } from './child3/child3.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, DemoComponent, TestComponent, HeroDetailComponent],
+  declarations: [AppComponent, HeroesComponent, DemoComponent, TestComponent, HeroDetailComponent, ParentComponent, Child1Component, Child3Component],
   imports: [BrowserModule, AppRoutingModule, FormsModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],
