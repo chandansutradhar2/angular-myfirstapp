@@ -33,12 +33,13 @@ export class HeroesComponent implements OnInit {
     console.log(hero);
   }
 
-  onChange(ev: any, id: number) {
-    console.log(ev.target.value);
-    let result = this.heroes.findIndex((hero) => {
-      return hero.id == id;
-    });
+  onChange(changeNameEvent: any, idx: number) {
+    // console.log(ev.target.value, idx);
+    this.heroes[idx].name = changeNameEvent.target.value;
+    // let result = this.heroes.findIndex((hero) => {
+    //   return hero.id == id;
+    // });
 
-    result !== -1 ? (this.heroes[result].name = ev.target.value) : null;
+    //result !== -1 ? (this.heroes[result].name = ev.target.value) : null;
   }
 }
