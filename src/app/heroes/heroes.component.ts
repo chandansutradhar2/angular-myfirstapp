@@ -9,6 +9,7 @@ import { Hero } from '../models/hero.model';
 export class HeroesComponent implements OnInit {
   // hero = 'Windstorm';
 
+  selectedHero!: Hero;
   hero: Hero = {
     id: 1,
     name: 'Windstrom',
