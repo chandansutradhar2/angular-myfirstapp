@@ -8,9 +8,10 @@ import { AuthModule } from './auth/auth.module';
 import { DemoComponent } from './demo/demo.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { TestComponent } from './test/test.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, DemoComponent, TestComponent],
+  declarations: [AppComponent, HeroesComponent, DemoComponent, TestComponent, HeroDetailComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],
