@@ -8,6 +8,7 @@ import { Hero } from '../models/hero.model';
 })
 export class HeroesComponent implements OnInit {
   // hero = 'Windstorm';
+  //password-condition: 1-4 weak-> red, 5-8 ->medium ->orange, 9-15 ->strong->green
 
   selectedHero!: Hero;
   hero: Hero = {
@@ -15,7 +16,7 @@ export class HeroesComponent implements OnInit {
     name: 'Windstrom',
     rating: 10,
   };
-
+  password: string = '';
   heroes = HEROES;
 
   constructor() {}

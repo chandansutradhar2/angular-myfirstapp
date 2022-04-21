@@ -1,3 +1,11 @@
+<div class="password-checker">
+    <label>Enter Password</label>
+    <input type="password" [(ngModel)]="password" />
+    <div [class.weak]="password.length<5" [class.medium]="password.length>=5 && password.length<=8"
+        [class.strong]="password.length>8">password strength</div>
+</div>
+
+
 <h2>{{hero.name | lowercase}} Details</h2>
 <div><span>id: </span>{{hero.id}}</div>
 <div><span>name: </span>{{hero.name}}</div>
@@ -10,13 +18,16 @@
 
 <h2>My Heroes</h2>
 <ul class="heroes">
-    <li *ngFor="let item of heroes;let i=index">
-        <span class="badge">{{item.id}}</span> {{item.name}}
-        <button type="button" (click)="onSelect(item)"></button>
+    <li *ngFor="let hero of heroes;let i=index">
+        <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+            <span class="badge">{{hero.id}}</span>
+            <span class="name">{{hero.name}}</span>
+        </button>
         <!-- <input [value]="item.name" (change)="onChange($event,i)"> -->
     </li>
 
 </ul>
+
 
 <div *ngIf="selectedHero">
     <h2>{{selectedHero.name | uppercase}} Details</h2>

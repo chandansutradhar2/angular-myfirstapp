@@ -1,3 +1,26 @@
+.password-checker {
+  width: 300px;
+  height: 300px;
+}
+
+.strong {
+  background-color: rgb(188, 255, 105);
+  width: max-content;
+  height: 20px;
+}
+
+.weak {
+  background-color: rgba(236, 63, 63, 0.859);
+  width: max-content;
+  height: 20px;
+}
+
+.medium {
+  background-color: rgb(248, 205, 49);
+  width: max-content;
+  height: 20px;
+}
+
 h2,
 h3 {
   font-weight: 600;
