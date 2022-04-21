@@ -7,9 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class Child3Component implements OnInit {
   @Input() username?: string;
-  constructor() {
-    console.log(this.username);
-  }
+  @Input() loginStatus?: boolean;
+  constructor() {}
 
   ngOnInit(): void {
     console.log(this.username);

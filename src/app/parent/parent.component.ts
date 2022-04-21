@@ -11,4 +11,9 @@ export class ParentComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  handler(status: boolean) {
+    console.log(status);
+    this.isLoggedIn = status;
+  }
 }

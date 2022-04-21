@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 import { HEROES } from '../mockup/mock-heroes';
 import { Hero } from '../models/hero.model';
 @Component({
@@ -17,9 +19,13 @@ export class HeroesComponent implements OnInit {
     rating: 10,
   };
   password: string = '';
-  heroes = HEROES;
+  heroes: Hero[] = [];
 
-  constructor() {}
+  constructor(private dbSvc: DataService) {
+    this.dbSvc.getAllHero().then((res) => {
+      this.heroes = res;
+    });
+  }
 
   ngOnInit(): void {
     this.heroes.forEach((hero) => {

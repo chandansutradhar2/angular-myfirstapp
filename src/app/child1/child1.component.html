@@ -1,4 +1,4 @@
 <p>child1 works!</p>
 
-<button *ngIf="sessionValid">Logout</button>
-<button *ngIf="!sessionValid">Login</button>
+<button *ngIf="sessionValid" (click)="onLogoutClick()">Logout</button>
+<button *ngIf="!sessionValid" (click)="onLoginClick()">Login</button>
